@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+dist/
+# keep personal handwriting out of the repo
+*.ttf
+*.otf
+*-report.json
+/work*/
+*.jpg
+*.jpeg
+*.png
+!docs/**/*.png

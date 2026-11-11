@@ -1,0 +1,99 @@
+{
+ "page": {
+  "columns": 2,
+  "font_size": "fit",
+  "pages": 1,
+  "margin": 22
+ },
+ "style": {
+  "tool": "pencil",
+  "divider": true,
+  "smudges": true
+ },
+ "blocks": [
+  {
+   "h1": "Biology 101 · Photosynthesis study guide"
+  },
+  {
+   "h2": "Overview"
+  },
+  {
+   "p": "Photosynthesis turns light energy into chemical energy stored in glucose. It happens in the chloroplasts of plant cells, mostly in the leaves."
+  },
+  {
+   "p": "Overall: 6CO_{2} + 6H_{2}O + light → C_{6}H_{12}O_{6} + 6O_{2}"
+  },
+  {
+   "h3": "Things to remember"
+  },
+  {
+   "list": [
+    "Light reactions happen in the thylakoid membranes and make ATP and NADPH.",
+    "The Calvin cycle happens in the stroma and uses ATP and NADPH to fix CO_{2}.",
+    "Water is split, which releases O_{2}."
+   ]
+  },
+  {
+   "h2": "Two stages"
+  },
+  {
+   "table": [
+    [
+     "Stage",
+     "Where",
+     "Inputs",
+     "Outputs"
+    ],
+    [
+     "Light reactions",
+     "Thylakoid",
+     "Light, H_{2}O, NADP^{+}, ADP",
+     "O_{2}, ATP, NADPH"
+    ],
+    [
+     "Calvin cycle",
+     "Stroma",
+     "CO_{2}, ATP, NADPH",
+     "G3P → glucose"
+    ],
+    [
+     "Note: rate limited by light, CO_{2} and temperature"
+    ]
+   ],
+   "header": true
+  },
+  {
+   "list": [
+    "Absorb light",
+    "Split water",
+    "Make ATP",
+    "Fix carbon"
+   ],
+   "ordered": true
+  },
+  {
+   "h2": "Key terms"
+  },
+  {
+   "table": [
+    [
+     "Chlorophyll",
+     "Green pigment that absorbs red and blue light"
+    ],
+    [
+     "Stomata",
+     "Pores that let CO_{2} in and O_{2} out"
+    ],
+    [
+     "Rubisco",
+     "Enzyme that fixes CO_{2} in the Calvin cycle"
+    ]
+   ],
+   "header": false,
+   "box": true
+  },
+  {
+   "note": "Tip: C4 and CAM plants reduce photorespiration by separating steps in space or time."
+  }
+ ]
+}

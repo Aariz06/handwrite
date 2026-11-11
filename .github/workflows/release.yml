@@ -1,0 +1,20 @@
+name: release
+on:
+  push:
+    tags: ["v*"]
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python3 tools/build_skill.py --check && python3 tools/build_skill.py --zip
+      - name: Publish release with the skill zip
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          V="${GITHUB_REF_NAME#v}"
+          awk -v v="$V" '$0 ~ "^## "v {f=1; next} /^## / && f {exit} f' CHANGELOG.md > notes.md
+          gh release create "$GITHUB_REF_NAME" "dist/handwrite-skill-v$V.zip" examples/handwriting-template.pdf --title "handwrite $GITHUB_REF_NAME" --notes-file notes.md

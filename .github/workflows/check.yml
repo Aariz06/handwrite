@@ -1,0 +1,17 @@
+name: check
+on: [push, pull_request]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: sudo apt-get install -y poppler-utils
+      - run: pip install -r requirements.txt
+      - name: SKILL.md matches src/
+        run: python3 tools/build_skill.py --check
+      - name: Scripts compile
+        run: python3 -m py_compile src/hw_font.py src/hw_doc.py
+      - name: Template generates
+        run: python3 src/hw_font.py template /tmp/template.pdf

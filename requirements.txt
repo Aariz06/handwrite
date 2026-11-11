@@ -1,0 +1,8 @@
+opencv-python-headless
+numpy
+scikit-image
+fonttools
+reportlab
+Hershey-Fonts
+pillow
+pypdfium2
